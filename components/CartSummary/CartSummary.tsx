@@ -9,8 +9,8 @@ const CartSummary = ({ totalAmount }: CartSummaryProps) => {
   return (
     <Segment clearing size="large" as="section">
       <span>
-        <strong>Sub total:</strong>
-        {` ${totalAmount}`}
+        <strong>Total:</strong>
+        {` $${totalAmount}`}
       </span>
       <Button color="black" floated="right">
         Check out

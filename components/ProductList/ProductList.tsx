@@ -11,11 +11,10 @@ const mapProductsToCards = (products: TProduct[]) =>
   products.map(({ name, id, price, image }) => (
     <Link key={id} href={`/product/${id}`} passHref>
       <Card
-        as="a"
         header={name}
-        image={{ children: <Image src={image} width={333} height={333} /> }}
+        image={{ children: <Image src={image} width={333} height={333} alt='avocado-image'/> }}
         meta={{
-          children: <Card.Meta style={{ color: 'dimgray' }}>{price}</Card.Meta>,
+          children: <Card.Meta style={{ color: 'dimgray' }}>${price}</Card.Meta>,
         }}
       />
     </Link>
