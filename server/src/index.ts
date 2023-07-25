@@ -3,7 +3,7 @@ import {productRouter} from "./routes/products"
 import {db} from "./database/index"
 import morgan from 'morgan';
 
-const port = 5000;
+const PORT = process.env.PORT || 5000;
 
 const server: Application = express();
 
@@ -22,7 +22,7 @@ server.use((req, res, next) => {
 server.use("/product", productRouter);
 
 db.sequelize.sync({ alter: true }).then(() => {
-  server.listen(port, () => {
-    console.log("Server raised in port " + port); // eslint-disable-line no-console
+  server.listen(PORT, () => {
+    console.log("Server raised in port " + PORT); // eslint-disable-line no-console
   });
 });
