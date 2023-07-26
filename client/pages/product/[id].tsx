@@ -6,7 +6,7 @@ import ProductSummary from '@components/ProductSummary/ProductSummary'
 import { GetStaticPaths, GetStaticProps } from 'next'
 
 export const getStaticPaths = async () => {
-  const {data} = await axios.get<TProduct[]>('http://localhost:5000/product/allProducts')
+  const {data} = await axios.get<TProduct[]>('https://avocado-nextjs-production.up.railway.app/product/allProducts')
 
   const paths = data?.map(({ id }) => ({ params: { id } }))
   
@@ -23,7 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
   const response = await fetch(
-    `http://localhost:5000/product/productById/${params?.id}`
+    `https://avocado-nextjs-production.up.railway.app/product/productById/${params?.id}`
   )
   const product = await response.json()
   // Pass post data to the page via props

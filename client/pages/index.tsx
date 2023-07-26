@@ -7,7 +7,7 @@ import KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'
 import ProductList from '@components/ProductList/ProductList'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch('http://localhost:5000/product/allProducts')
+  const res = await fetch('https://avocado-nextjs-production.up.railway.app/product/allProducts')
   const repo = await res.json()
   return { props: { repo } }
 }

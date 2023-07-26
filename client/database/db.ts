@@ -11,12 +11,12 @@ class Database {
   constructor() {}
 
   async getAll() {
-    const {data} = await axios.get<GetUsersResponse>("http://localhost:5000/product/allProducts")
+    const {data} = await axios.get<GetUsersResponse>("https://avocado-nextjs-production.up.railway.app/product/allProducts")
     return data
   }
 
   async getById(id: string){
-    const {data} = await axios.get<GetUsersResponse>(`http://localhost:5000/product/productById/${id}`)
+    const {data} = await axios.get<GetUsersResponse>(`https://avocado-nextjs-production.up.railway.app/product/productById/${id}`)
     return data
   }
 }
