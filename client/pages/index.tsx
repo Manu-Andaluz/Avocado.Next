@@ -19,7 +19,7 @@ const HomePage = ({ repo }: { repo: TProduct[] }) => {
       <KawaiiHeader />
       <section>
         <Link href="/yes-or-no">
-          <a>¿Deberia comer en Avo Store hoy?</a>
+          <a>¿Deberia comprar en Avo Store hoy?</a>
         </Link>
       </section>
       <ProductList products={repo} />

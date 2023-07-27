@@ -12,16 +12,16 @@ const mapProductsToCards = (products: TProduct[]) =>
     <Link key={id} href={`/product/${id}`} passHref>
       <Card
         header={name}
-        image={{ children: <Image src={image_url} width={333} height={250} alt='avocado-image'/> }}
+        image={{ children: <Image src={image_url} width={522} height={603} alt='avocado-image'/> }}
         meta={{
-          children: <Card.Meta style={{ color: 'dimgray' }}>${price}</Card.Meta>,
+          children: <Card.Meta className='price' style={{ color: 'black',fontSize: 20 }}>${price}</Card.Meta>,
         }}
       />
     </Link>
   ))
 
 const ProductList = ({ products }: ProductListProps) => (
-  <Card.Group itemsPerRow={2} stackable>
+  <Card.Group itemsPerRow={3} stackable>
     {mapProductsToCards(products)}
   </Card.Group>
 )
