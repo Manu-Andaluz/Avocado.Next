@@ -58,25 +58,6 @@ const Footer = () => (
             www.flaticon.com
           </a>
         </p>
-        <p className="colophon-entry">
-          Avocado images taken from{' '}
-          <a
-            className="acnor"
-            target="_blank"
-            href="https://www.californiaavocado.com/avocado101/avocado-varieties"
-            title="California Avocado"
-          >
-            Avocado 101
-          </a>
-          {' at '}
-          <a
-            target="_blank"
-            href="https://www.californiaavocado.com"
-            title="Flaticon"
-          >
-            California Avocado
-          </a>
-        </p>
       </div>
     </Container>
 
